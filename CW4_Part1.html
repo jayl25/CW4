@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classwork 4</title>
+</head>
+<body>
+    
+    <a href="divideArray.html">Link to divideArray() problem</a>
+    
+    <h1>Part 1 - Question 1</h1>
+    <script>
+        const input = prompt('Please specify how long the fibonacci sequence should be: ');
+        document.write("<br>");        
+        document.write(`User specified the length of the sequence to be ${input} values.`);
+        console.log(`User specified the length of the sequence to be ${input} values.`);
+        
+       fibonacci(input);
+
+        function fibonacci(num){
+            let nums = [0, 1];
+            document.write("<br><br>"); 
+            for(let idx = 2; idx <= input; idx++){
+                nums[idx] = nums[idx - 1] + nums[idx - 2];
+            }
+
+            document.write("Here are the first n fibonacci numbers: " + nums);
+            console.log("Here are the first n fibonacci numbers: " + nums);
+        }
+    </script><br>
+
+    <h1>Part 1 - Question 2</h1>
+    <script>
+        for(let idx = 0; idx < 5; idx++){
+            for(let j = 0; j < idx + 1; j++){
+                document.write("*");
+            }
+            document.write("<br>");
+        }
+    </script><br>
+
+    <h1>Part 1 - Question 3</h1>
+    <script>
+        const len = prompt('Please specify len of array: ');
+        document.write("User specified the length of the array: " + len);
+        document.write("<br>"); 
+        let num_list = build_and_sortArray(len);
+        
+        function build_and_sortArray(len){
+             let num_list = [];
+             for(let i = 0; i < len; i++){
+                 num_list.push(prompt('enter element in array: '));
+             }
+             document.write("<br>"); 
+             document.write("The user's array was: " + "[" + num_list + "]");
+             document.write("<br>"); 
+             document.write("The Sorted Array of the User: " + num_list.sort());
+        }
+    </script>
+
+</body>
+</html>
